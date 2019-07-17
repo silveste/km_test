@@ -1,3 +1,5 @@
+//// HEADER ////
+
 .header {
   display: flex;
   justify-content: center;
@@ -22,6 +24,13 @@
     & > * {
       margin: 1rem 0;
     }
+
+    & .icon {
+      display: inline-block;
+      margin-right: 1.5rem;
+      width: 5rem;
+      height: 5rem;
+    }
   }
 
   &__img-box {
@@ -33,6 +42,22 @@
     & > img {
       display: block;
       max-height: 500px;
+    }
+  }
+}
+
+//// FEATURES ////
+.features {
+  display: flex;
+  justify-content: center;
+
+  & > .feature {
+    margin: 6rem;
+    width: 33rem;
+
+    & > .icon {
+      width: 10rem;
+      height: 10rem;
     }
   }
 }
