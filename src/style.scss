@@ -1,0 +1,17 @@
+@import "./style2.scss";
+
+body {
+  background-color: purple;
+
+  #root {
+    width: 50%;
+    margin: 0 auto;
+    background-color: cyan;
+  }
+
+  #image {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
