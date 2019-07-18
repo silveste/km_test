@@ -31,3 +31,32 @@
     margin-top: 1rem;
   }
 }
+
+//// INPUT-BTN ////
+
+.input-btn {
+  display: flex;
+
+  & > * {
+    padding: 1rem 2rem;
+    border: none;
+    display: block;
+    outline: none;
+  }
+
+  &__input {
+    color: $color-grey;
+    background-color: #fff;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    width: 25rem;
+  }
+
+  &__btn {
+    color: #fff;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    background-color: $color-highlight;
+    width: 10rem;
+  }
+}

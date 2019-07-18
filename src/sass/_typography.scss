@@ -12,7 +12,12 @@
 
 .main-text {
   font-family: $font-main;
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: 400;
   color: $color-grey;
+
+  &--bold {
+    color: $color-dark;
+    font-weight: 700;
+  }
 }
