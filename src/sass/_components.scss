@@ -85,47 +85,6 @@
   align-items: center;
 }
 
-//// AUTHORS ////
-.authors {
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  overflow-x: auto;
-  position: relative;
-
-  & img {
-    flex: 0 0 auto;
-    width: 50px;
-    height: 50px;
-  }
-
-  & img:not(:last-child) {
-    margin-right: 4px;
-  }
-
-  &::after,
-  &::before {
-    content: "";
-    display: block;
-    width: 50px;
-    height: 50px;
-  }
-
-  &::after {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-image: linear-gradient(to right, rgba(#fff, 0), #fff);
-  }
-
-  &::before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: linear-gradient(to right, #fff, rgba(#fff, 0));
-  }
-}
-
 //// LINKS ////
 .link {
   &,
@@ -139,5 +98,50 @@
 
   &:hover {
     color: $color-highlight;
+  }
+}
+
+//// SLIDER ////
+
+.image-slider-wrapper {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+#image_slider {
+  margin: 0 auto;
+  display: flex;
+  height: 50px;
+  //The width should be calculated dynamically depending on the nnumber of images
+  width: 1000px;
+  padding: 0;
+  top: 0;
+  //The slider handler will move the slider by changing the values of translateX
+  transform: translateX(0);
+
+  & li {
+    position: relative;
+    max-width: 100%;
+    list-style: none;
+
+    &:hover::after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 50px;
+      background-color: rgba($color-highlight, 0.5);
+    }
+
+    & img {
+      position: relative;
+      flex: 0 0 auto;
+      width: 50px;
+      height: 50px;
+      margin: 0 2px;
+    }
   }
 }

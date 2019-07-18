@@ -195,6 +195,39 @@
   align-items: center;
   margin: 4.8rem 2rem 2.4rem;
 
+  .authors {
+      position: relative;
+      margin-top: 1rem;
+      max-width: 120rem;
+      width: 90%;
+      height:50px;
+      padding:0;
+
+      &::after,
+      &::before {
+        content: "";
+        width: 50px;
+        height: 50px;
+      }
+
+      &::after {
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: linear-gradient(to right, rgba(#fff, 0), #fff);
+      }
+
+      &::before {
+        z-index: 10;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: linear-gradient(to right, #fff, rgba(#fff, 0));
+      }
+
+  }
+
   & > .authors {
     margin: 2.5rem 50px 0;
     max-width: 120rem;
