@@ -5,6 +5,7 @@
   border-radius: 50%;
   vertical-align: middle;
   text-align: center;
+  transition: all 0.2s;
 
   & > img {
     transform: translateY(50%);
@@ -54,6 +55,12 @@
     border-bottom-right-radius: 1rem;
     background-color: $color-highlight;
     width: 10rem;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 1px 5px $color-dark;
+    }
   }
 }
 
@@ -103,5 +110,22 @@
     top: 0;
     left: 0;
     background-image: linear-gradient(to right, #fff, rgba(#fff, 0));
+  }
+}
+
+//// LINKS ////
+.link {
+  &,
+  &:visited,
+  &:active {
+    text-decoration: none;
+    color: $color-grey;
+    display: inline-block;
+    padding: 1rem;
+    transition: color 0.2s;
+  }
+
+  &:hover {
+    color: $color-highlight;
   }
 }
