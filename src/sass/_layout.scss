@@ -77,10 +77,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
-    & > * {
-      margin: 1rem 0;
-    }
   }
 
   &__img-box {
@@ -106,8 +102,10 @@
   margin-top: 4.8rem;
   margin-bottom: 2.4rem;
 
-  & > * {
-    margin: 1.2rem 0;
+  & > .authors {
+    margin: 2.5rem 50px 0;
+    max-width: 120rem;
+    width: 90%;
   }
 }
 
@@ -121,13 +119,10 @@
   margin-bottom: 4.8rem;
 
   & .icon {
+    margin-top: 1.2rem;
     display: inline-block;
     margin-right: 1rem;
     width: 3rem;
     height: 3rem;
-  }
-
-  & > * {
-    margin: 1.2rem 0;
   }
 }

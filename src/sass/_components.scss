@@ -26,10 +26,6 @@
   align-items: center;
   color: $color-dark;
   text-align: center;
-
-  & > * {
-    margin-top: 1rem;
-  }
 }
 
 //// INPUT-BTN ////
@@ -37,7 +33,7 @@
 .input-btn {
   display: flex;
 
-  & > * {
+  & > input {
     padding: 1rem 2rem;
     border: none;
     display: block;
@@ -58,5 +54,54 @@
     border-bottom-right-radius: 1rem;
     background-color: $color-highlight;
     width: 10rem;
+  }
+}
+
+//// TESTIMONY ////
+
+.testimony {
+  max-width: 85rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+//// AUTHORS ////
+.authors {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  position: relative;
+
+  & img {
+    flex: 0 0 auto;
+    width: 50px;
+    height: 50px;
+  }
+
+  & img:not(:last-child) {
+    margin-right: 4px;
+  }
+
+  &::after,
+  &::before {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 50px;
+  }
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-image: linear-gradient(to right, rgba(#fff, 0), #fff);
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #fff, rgba(#fff, 0));
   }
 }

@@ -1,10 +1,12 @@
-/* Colors */
 
 .u-content-highlight {
   color: $color-highlight;
 }
 
-/* Behaviour */
 .u-fluid {
   max-width: 100%;
+}
+
+.u-shorter-width {
+  max-width: 85rem;
 }
