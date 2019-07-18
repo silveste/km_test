@@ -1,0 +1,28 @@
+//MEDIA QUERY MANAGER
+
+/*
+device-type options:
+phone			0-600 Phone
+tab-port	600-900 Table Portrait
+tab-land	900-1200 Table Landscape
+					1200-1800 Normal styles (Desktop first approach)
+big-desk	1800 + Big Screens
+*/
+
+@mixin respond ($device-type) {
+  @if $device-type == break-three {
+		 @media only screen and (max-width: 37.5em) { @content; } //600px
+	}
+
+	@if $device-type == break-two {
+		@media only screen and (max-width: 43.125em) { @content; } //690px
+	}
+
+	@if $device-type == break-one {
+		@media only screen and (max-width: 56.25em) { @content; } //900px
+	}
+
+	@if $device-type == big-desk {
+		@media only screen and (min-width: 112.5) { @content; } //1800px
+	}
+}

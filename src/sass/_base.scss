@@ -14,9 +14,11 @@ html {
   box-sizing: border-box;
   font-size: 62.5%;
 
-  /*
-@media only screen and (max-width: $bp-large) {
+  @include respond(break-one){
+    font-size: 56.25%;
+  }
+
+  @include respond(break-two){
     font-size: 50%;
   }
-*/
 }

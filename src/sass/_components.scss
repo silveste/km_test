@@ -47,6 +47,14 @@
     border-top-left-radius: 1rem;
     border-bottom-left-radius: 1rem;
     width: 25rem;
+
+    @include respond(break-one) {
+      width: 20rem;
+    }
+
+    @include respond(break-one) {
+      width: 66%;
+    }
   }
 
   &__btn {
@@ -56,6 +64,10 @@
     background-color: $color-highlight;
     width: 10rem;
     transition: all 0.2s;
+
+    @include respond(break-one) {
+      width: 34%;
+    }
 
     &:hover {
       transform: translateY(-2px);
@@ -77,6 +89,7 @@
 .authors {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: center;
   overflow-x: auto;
   position: relative;
 
@@ -119,7 +132,6 @@
   &:visited,
   &:active {
     text-decoration: none;
-    color: $color-grey;
     display: inline-block;
     padding: 1rem;
     transition: color 0.2s;
