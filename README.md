@@ -20,6 +20,8 @@
 
 > Video has been replaced by a placeholder image
 
+> The repository contains all development files. The deployed files are in "dist" directory. Note that usually this directory should be empty as those files are the result of the build process "npm run build". However, I decided to include them to allow you to check against the code in the live version at netlify
+
 # Improvements
 
 > Use compression to improve performance
