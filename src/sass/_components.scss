@@ -102,46 +102,97 @@
 }
 
 //// SLIDER ////
-
-.image-slider-wrapper {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-}
-
-#image_slider {
-  margin: 0 auto;
-  display: flex;
+.slider {
+  position: relative;
+  margin-top: 1rem;
+  max-width: 120rem;
+  width: 90%;
   height: 50px;
-  //The width should be calculated dynamically depending on the nnumber of images
-  width: 1000px;
   padding: 0;
-  top: 0;
-  //The slider handler will move the slider by changing the values of translateX
-  transform: translateX(0);
 
-  & li {
-    position: relative;
-    max-width: 100%;
-    list-style: none;
+  .slider__handler {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    color: rgba(0, 0, 0, 0);
 
-    &:hover::after {
-      content: "";
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50px;
-      height: 50px;
-      background-color: rgba($color-highlight, 0.5);
+    &:hover {
+      color: $color-highlight;
     }
+  }
 
-    & img {
+  .slider__handler--right {
+    justify-content: flex-end;
+    right: -2.5%;
+    background-image: linear-gradient(to right, rgba(#fff, 0), #fff);
+  }
+
+  .slider__handler--left {
+    justify-content: flex-start;
+    left: -2.5%;
+    background-image: linear-gradient(to left, rgba(#fff, 0), #fff);
+  }
+
+  #slider__wrapper {
+    overflow: hidden;
+    height: 50px;
+    width: 105%;
+    margin: 0 -2.5%;
+    display: block;
+    position: relative;
+  }
+
+  #slider__floating-row {
+    position: absolute;
+
+    /*
+    left: Initial value must be set by JS as half of #slider_wrapper width (slide_wrapper.clientWidth) to be centered
+    I may need to include a listener in case window width changes
+    */
+    left: 0;
+    display: flex;
+    height: 50px;
+
+    /*
+    The width should be calculated dynamically depending on the number of images
+    */
+    width: 1000px;
+    padding: 0;
+    top: 0;
+
+    /*
+    JS set left property as half of the container width.
+    To center it, translateX by -50% is required
+    */
+    transform: translateX(-50%);
+
+    & li {
       position: relative;
-      flex: 0 0 auto;
-      width: 50px;
-      height: 50px;
-      margin: 0 2px;
+      max-width: 100%;
+      list-style: none;
+
+      &:hover::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        background-color: rgba($color-highlight, 0.5);
+      }
+
+      & img {
+        position: relative;
+        flex: 0 0 auto;
+        width: 50px;
+        height: 50px;
+        margin: 0 2px;
+      }
     }
   }
 }
