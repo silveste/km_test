@@ -1,4 +1,4 @@
-# KAX MEDIA TEST
+# Webpack Boilerplate landing Page
 
 # Requirements
 
